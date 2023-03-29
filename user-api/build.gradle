@@ -22,6 +22,7 @@ dependencies {
 
     testImplementation 'com.h2database:h2'
 
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
     annotationProcessor 'org.projectlombok:lombok'
