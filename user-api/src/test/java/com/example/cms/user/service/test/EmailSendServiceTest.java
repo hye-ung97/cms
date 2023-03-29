@@ -17,7 +17,7 @@ class EmailSendServiceTest {
         SendMailForm form = SendMailForm.builder()
                 .subject("test")
                 .to("hysung714@naver.com")
-                .from("hysung714@naver.com")
+                .from("zerobase@tester.com")
                 .text("hello this is test email")
                 .build();
         mailgunClient.sendMail(form);

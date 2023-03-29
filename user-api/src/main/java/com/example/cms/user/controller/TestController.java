@@ -2,7 +2,6 @@ package com.example.cms.user.controller;
 
 import com.example.cms.user.client.MailgunClient;
 import com.example.cms.user.client.mailgun.SendMailForm;
-import com.example.cms.user.service.test.EmailSendService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
