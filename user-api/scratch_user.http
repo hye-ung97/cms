@@ -1,0 +1,38 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "2023-03-31",
+  "email": "hysung714@naver.com",
+  "name": "name",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증(고객)
+GET http://localhost:8081/signup/customer/verify?email=hysung714@naver.com&code=7y0YirmBnj
+
+### 로그인 (고객)
+POST http://localhost:8081/signIn/customer
+Content-Type: application/json
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAyNjM5MzksImV4cCI6MTY4MDM1MDMzOX0.JorRS-80uvdBOwchShNRsmPavppsg20pXX7XygRZ5_U
+
+### 잔액 변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAyNjM5MzksImV4cCI6MTY4MDM1MDMzOX0.JorRS-80uvdBOwchShNRsmPavppsg20pXX7XygRZ5_U
+
+{
+  "from": "sever",
+  "message": "charge",
+  "money": 1000
+}
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
