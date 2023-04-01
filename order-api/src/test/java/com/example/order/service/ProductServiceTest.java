@@ -3,6 +3,8 @@ package com.example.order.service;
 import com.example.order.domain.model.Product;
 import com.example.order.domain.product.AddProductForm;
 import com.example.order.domain.product.AddProductItemForm;
+import com.example.order.domain.product.UpdateProductForm;
+import com.example.order.domain.product.UpdateProductItemForm;
 import com.example.order.domain.repository.ProductItemRepository;
 import com.example.order.domain.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
