@@ -17,6 +17,11 @@ GET http://localhost:8081/signup/customer/verify?email=hysung714@naver.com&code=
 POST http://localhost:8081/signIn/customer
 Content-Type: application/json
 
+{
+  "email": "hysung714@naver.com",
+  "password": "pw"
+}
+
 ### 회원 정보 조회 (고객)
 GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
@@ -34,5 +39,24 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4Y
 }
 
 ### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "2023-03-31",
+  "email": "hysung714@naver.com",
+  "name": "name",
+  "password": "pw",
+  "phone": "01000000000"
+}
+### 이메일 인증(셀러)
+GET http://localhost:8081/signup/seller/verify?email=hysung714@naver.com&code=GNp8dm2dnQ
 
 ### 로그인 (셀러)
+POST http://localhost:8081/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "hysung714@naver.com",
+  "password": "pw"
+}
