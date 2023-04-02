@@ -1,7 +1,7 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzEzMzMzLCJleHAiOjE2ODAzOTk3MzN9.ZQgNMHhC-e4r9ZwbIua2tovKz99US-PfywYuXEQSGgs
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDEzMTExLCJleHAiOjE2ODA0OTk1MTF9.Nh6Y0RGpAWw7I8Qe4LsgyZ8hSsLfFqUsGWPTNYr3OBA
 
 {
   "description": "상품설명",
@@ -74,6 +74,26 @@ GET http://localhost:8082/search/product?name=나이키
 Content-Type: application/json
 
 ### 상품 디테일 검색
-GET http://localhost:8082/search/product/detail?productId=2
+GET http://localhost:8082/search/product/detail?productId=1
 Content-Type: application/json
 
+
+### 장바구니 추가
+POST http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0MTI5NTYsImV4cCI6MTY4MDQ5OTM1Nn0.sjsMzBvwfN6lV1doy10s4yhGc7Xs_OyE8LZzLH5j1mQ
+
+{
+  "description": "상품설명",
+  "id": 1,
+  "items": [
+    {
+      "count": 1,
+      "id": 1,
+      "name": "1234",
+      "price": 10000
+    }
+  ],
+  "name": "나이키 에어포스",
+  "sellerId": 1
+}
