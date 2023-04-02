@@ -19,6 +19,11 @@ public class ProductItemService {
     private final ProductRepository productRepository;
     private final ProductItemRepository productItemRepository;
 
+    @Transactional
+    public ProductItem getProductItem(Long id){
+        return productItemRepository.getById(id);
+    }
+
 
     @Transactional
     public Product addProductItem (Long sellerId, AddProductItemForm form){

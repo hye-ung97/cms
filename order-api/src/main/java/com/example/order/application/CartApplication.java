@@ -33,7 +33,7 @@ public class CartApplication {
         }
 
         Cart cart = cartService.getCart(customerId);
-        if(cart != null && !addAble(cart, product, form)){
+        if(!addAble(cart, product, form)){
             throw new CustomException(ITEM_COUNT_NOT_ENOUGH);
         }
         return cartService.addCart(customerId, form);
@@ -46,6 +46,7 @@ public class CartApplication {
 
     public Cart getCart(Long customerId){
         Cart cart = refreshCart(cartService.getCart(customerId));
+        cartService.putCart(cart.getCustomerId(), cart);
         Cart returnCart = new Cart();
         returnCart.setCustomerId(customerId);
         returnCart.setProducts(cart.getProducts());
@@ -60,7 +61,7 @@ public class CartApplication {
         cartService.putCart(customerId, null);
     }
 
-    private Cart refreshCart(Cart cart){
+    protected Cart refreshCart(Cart cart){
 
 
         Map<Long, Product> productMap = productSearchService
@@ -131,7 +132,7 @@ public class CartApplication {
                 cart.addMessage(builder.toString());
             }
         }
-        cartService.putCart(cart.getCustomerId(), cart);
+
         return cart;
     }
 
