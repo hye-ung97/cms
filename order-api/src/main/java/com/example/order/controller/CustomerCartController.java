@@ -1,6 +1,7 @@
 package com.example.order.controller;
 
 import com.example.order.application.CartApplication;
+import com.example.order.application.OrderApplication;
 import com.example.order.domain.product.AddProductCartForm;
 import com.example.order.domain.redis.Cart;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
@@ -15,6 +16,7 @@ public class CustomerCartController {
 
     private final JwtAuthenticationProvider provider;
     private final CartApplication cartApplication;
+    private final OrderApplication orderApplication;
 
     @PostMapping
     public ResponseEntity<Cart> addCart(@RequestHeader(name = "X-AUTH-TOKEN") String token,
@@ -33,6 +35,14 @@ public class CustomerCartController {
     public ResponseEntity<Cart> updateCart(@RequestHeader(name = "X-AUTH-TOKEN") String token,
                                            @RequestBody Cart cart){
         return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
+    }
+
+    @PostMapping("/order")
+    public ResponseEntity<Cart> order(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                        @RequestBody Cart cart){
+
+        orderApplication.order(token, cart);
+        return ResponseEntity.ok().build();
     }
 
 }
