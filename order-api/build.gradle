@@ -41,7 +41,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.springframework.data:spring-data-envers'
-	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+//	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.15'
 }
 
 dependencyManagement {
