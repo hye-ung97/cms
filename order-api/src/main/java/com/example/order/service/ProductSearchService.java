@@ -3,7 +3,6 @@ package com.example.order.service;
 import com.example.order.domain.model.Product;
 import com.example.order.domain.repository.ProductRepository;
 import com.example.order.exception.CustomException;
-import com.example.order.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +25,7 @@ public class ProductSearchService {
     }
 
     public List<Product> getListByProductIds(List<Long> productIds){
-        return productRepository.findAllById(productIds);
+        return productRepository.findAllByIdIn(productIds);
     }
 
 }

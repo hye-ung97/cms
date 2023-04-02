@@ -1,7 +1,5 @@
 package com.example.order.domain.product;
 
-import com.example.order.domain.redis.Cart;
-import io.swagger.models.auth.In;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
