@@ -7,7 +7,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4Y
   "description": "상품설명",
   "items": [
     {
-      "count": 1,
+      "count": 10,
       "name": "1234",
       "price": 10000
     }
@@ -30,7 +30,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4Y
 ### 상품 수정
 PUT http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzEzMzMzLCJleHAiOjE2ODAzOTk3MzN9.ZQgNMHhC-e4r9ZwbIua2tovKz99US-PfywYuXEQSGgs
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDEzMTExLCJleHAiOjE2ODA0OTk1MTF9.Nh6Y0RGpAWw7I8Qe4LsgyZ8hSsLfFqUsGWPTNYr3OBA
 
 {
   "description": "상품설명",
@@ -52,7 +52,7 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzEzMzMzLCJleHAiOjE2ODAzOTk3MzN9.ZQgNMHhC-e4r9ZwbIua2tovKz99US-PfywYuXEQSGgs
 
 {
-  "count": 1,
+  "count": 10,
   "name": "123",
   "price": 10000,
   "id" : 1
@@ -97,3 +97,8 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4Y
   "name": "나이키 에어포스",
   "sellerId": 1
 }
+
+### 장바구니 보기
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0QnRyc3BBMWM0Z1MvSFRGcHBZYkxqTnQ4YXBkSmxYOG54djlYamhYNkJFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0MTI5NTYsImV4cCI6MTY4MDQ5OTM1Nn0.sjsMzBvwfN6lV1doy10s4yhGc7Xs_OyE8LZzLH5j1mQ
